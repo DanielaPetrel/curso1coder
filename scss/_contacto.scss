@@ -1,0 +1,41 @@
+// Variables generales
+$font-family: "Montserrat", sans-serif;
+$color-black: #000000;
+$margin-left-default: 60px;
+$gap-default: 20px;
+$flex-column-align-center: center;
+$grid-template-columns-default: 1fr 1fr 1fr;
+// Mixin para flexbox
+@mixin flex-column($justify-content: flex-start, $align-items: $flex-column-align-center, $gap: $gap-default) {
+    display: flex;
+    flex-direction: column;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    gap: $gap;
+  }
+  
+  @mixin grid-layout($columns, $gap: $gap-default, $margin-left: $margin-left-default) {
+    display: grid;
+    grid-template-columns: $columns;
+    gap: $gap;
+    margin-left: $margin-left;
+  }
+/* Sección de Contacto */
+.contactame {
+    @include flex-column(flex-start, flex-start, $gap-default);
+    margin-left: $margin-left-default;
+  }
+  
+  /* Sección de Servicios Copy */
+  .servicios-copy {
+    @include flex-column(center, $flex-column-align-center, $gap-default);
+    text-align: center;
+  }
+  
+  /* Sección de Diferentes Servicios */
+  .diferentes-servicios {
+    @include grid-layout($grid-template-columns-default, $gap-default, $margin-left-default);
+    align-items: center;
+    justify-content: center;
+  }
+  

@@ -1,0 +1,130 @@
+// Variables
+$font-primary: "Montserrat", sans-serif;
+$color-primary: #000000;
+$gap-default: 20px;
+$font-size-default: 18px;
+$font-weight-bold: bold;
+$font-size-small: 15px;
+$font-size-large: 35px;
+$margin-top-default: 30px;
+$margin-bottom-default: 30px;
+$height-img-default: 300px;
+$width-img-default: 500px;
+$margin-left-default: 70px;
+$margin-top-section: 100px;
+// Mixins
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @mixin flex-column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  @mixin flex-row {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  @mixin gap($gap-size) {
+    gap: $gap-size;
+  }
+  
+  @mixin box-margin($top: $margin-top-default, $bottom: $margin-bottom-default, $left: 0, $right: 0) {
+    margin-top: $top;
+    margin-bottom: $bottom;
+    margin-left: $left;
+    margin-right: $right;
+}
+// Sección de la diseñadora
+.descripcion-disenadora {
+    @include flex-row;
+    justify-content: space-between;
+    @include gap($gap-default);
+    @include box-margin($margin-top-default);
+  }
+  
+  .foto-disenadora img {
+    height: $height-img-default;
+    width: $width-img-default;
+  }
+  
+  // Segunda sección del home
+  .servicios-disenadora {
+    @include box-margin($margin-top-default);
+  }
+  
+  .servicios-home ul {
+    @include flex-row;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    margin-top: $margin-top-section;
+    margin-bottom: 40px;
+    @include gap(30px);
+  }
+  
+  .servicios-home ul li {
+    font-size: 20px;
+    font-weight: $font-weight-bold;
+  }
+  
+  .botoncontacto-seccion2home {
+    @include box-margin(0, 100px, $margin-left-default, 0);
+  }
+  
+  .botoncontacto-seccion2home a {
+    text-decoration: none;
+    color: $color-primary;
+    font-family: $font-primary;
+    font-size: $font-size-default;
+  }
+  
+  // Tercera sección del home
+  .testimonio-home {
+    @include flex-column;
+    @include gap(10px);
+  }
+  
+  .testimonio-home img {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    margin-bottom: 3px;
+  }
+  
+  .testimonio-uniandes {
+    @include flex-column;
+    @include gap(10px);
+  }
+  
+  .testimonio-uniandes p {
+    font-weight: $font-weight-bold;
+    font-size: $font-size-small;
+    text-align: center;
+    margin-top: 1px;
+  }
+  
+  // Cuarta sección del home
+  .conectate-home {
+    @include flex-column;
+    @include gap(2px);
+  }
+  
+  .conectate-home h3 {
+    font-size: $font-size-large;
+    margin-bottom: 3px;
+  }
+  
+  .conectate-home p {
+    margin-bottom: $margin-bottom-default;
+  }
+  
+  .botones-contactohome {
+    @include flex-row;
+    @include gap($gap-default);
+  }
+  

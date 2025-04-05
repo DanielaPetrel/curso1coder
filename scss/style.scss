@@ -1,0 +1,102 @@
+@use 'navbar';
+@use 'home';
+@use 'footer';
+@use 'proyectos';
+@use 'quiensoy';
+@use 'contacto';
+@use 'mobile';
+// Variables de tipografía
+$font-family: "Montserrat", sans-serif;
+$font-weight-bold: 700;
+$font-weight-normal: 400;
+$line-height-120: 120%;
+$line-height-130: 130%;
+$line-height-140: 140%;
+$line-height-150: 150%; // Añadido para resolver el error
+$font-size-h1: 35px;
+$font-size-p: 13px;
+$font-size-head: 16px;
+$font-size-h2: 35px;
+$font-size-li: 32px;
+$font-size-right-button: 32px;
+$font-size-h3: 48px;
+$font-size-label: 20px;
+$font-size-h4: 24px;
+$font-size-h5: 24px;
+
+// Variables de botón
+$button-background-color: white;
+$button-text-color: black;
+$button-border-color: black;
+$button-border-radius: 0;
+$button-font-size: 16px;
+$button-padding: 12px 24px;
+
+// Mixin para tipografía
+@mixin typography($font-size, $font-weight, $line-height) {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+// Mixin para botones
+@mixin button-style($bg-color, $text-color, $border-color, $border-radius, $font-size, $padding) {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: $padding;
+  border: 2px solid $border-color;
+  border-radius: $border-radius;
+  font-size: $font-size;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+h1 {
+  @include typography($font-size-h1, $font-weight-bold, $line-height-120);
+}
+
+p {
+  @include typography($font-size-p, $font-weight-normal, $line-height-150);
+}
+
+h2 {
+  @include typography($font-size-h2, $font-weight-bold, $line-height-120);
+}
+
+li {
+  @include typography($font-size-li, $font-weight-normal, $line-height-130);
+}
+
+.right-button {
+  @include typography($font-size-right-button, $font-weight-normal, $line-height-130);
+}
+
+button {
+  @include button-style($button-background-color, $button-text-color, $button-border-color, $button-border-radius, $button-font-size, $button-padding);
+}
+
+h3 {
+  @include typography($font-size-h3, $font-weight-bold, $line-height-120);
+}
+
+label {
+  @include typography($font-size-label, $font-weight-bold, $line-height-140);
+}
+
+input {
+  box-sizing: border-box;
+  width: 180px;
+  height: 24px;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+}
+
+h4 {
+  @include typography($font-size-h4, $font-weight-bold, $line-height-140);
+}
+
+h5 {
+  @include typography($font-size-h5, $font-weight-bold, $line-height-140);
+}

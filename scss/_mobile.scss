@@ -1,0 +1,214 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+  }
+  
+  .logo img {
+    width: 150px;
+  }
+  
+  .nav-buttons li {
+    margin-left: 20px;
+  }
+  
+  .nav-buttons a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .right-button button {
+    border: 2px solid black;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .right-button button a {
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  /* Icono de hamburguesa */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+  
+  .hamburger .line {
+    width: 30px;
+    height: 3px;
+    background-color: #000000;
+  }
+  
+  /* Media Query para dispositivos móviles */
+  @media (max-width: 768px) {
+    /* Menú de navegación */
+    .nav-buttons ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      background-color: #ffffff;
+    }
+  
+    .nav-buttons li {
+      margin: 20px 0;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  
+    .menu-toggle:checked + .hamburger + .nav-buttons ul {
+      display: flex;
+    }
+  
+    /* Sección Descripción Diseñadora */
+    .descripcion-disenadora {
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    .informacion-disenadora { // Corregido el nombre de la clase
+      width: 100%;
+      text-align: left;
+    }
+  
+    .titulo-home {
+      font-size: 28px;
+    }
+  
+    .texto-disenadora {
+      font-size: 16px;
+    }
+  
+    .foto-disenadora {
+      width: 100%;
+      margin-top: 20px;
+    }
+  
+    .foto-disenadora img {
+      width: 100%;
+      margin: 0 auto;
+    }
+  
+    button {
+      width: 100%;
+    }
+  
+    /* Sección Servicios */
+    .servicios-disenadora {
+      flex-direction: column;
+      padding: 20px;
+      text-align: left;
+    }
+  
+    .servicios-home {
+      grid-template-rows: auto;
+    }
+  
+    /* Testimonios y Contacto */
+    .testimonio-home, .conectate-home {
+      flex-direction: column;
+      padding: 20px;
+      text-align: left;
+    }
+  
+    /* Footer */
+    .footer-topcompleto {
+      grid-template-columns: 1fr;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-top {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    .footer-icons {
+      gap: 15px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+  
+    .footer-icons i {
+      font-size: 25px;
+    }
+  
+    /* Página de Proyectos */
+    .titulo-proyectosdestacados {
+      text-align: left;
+      margin-left: 20px;
+    }
+  
+    .proyecto-1, .proyecto-2 {
+      height: auto;
+    }
+  
+    .proyecto-1 img, .proyecto-2 img {
+      width: 80%;
+      height: auto;
+      margin: 10px;
+    }
+  
+    .contenido-proyecto1, .contenido-proyecto2 {
+      flex-direction: column;
+      align-items: center;
+      width: 80%;
+    }
+  
+    .texto-proyecto1, .texto-proyecto2 {
+      width: 100%;
+      text-align: left;
+    }
+  
+    .contenido-proyecto1 a, .contenido-proyecto2 a {
+      font-size: 16px;
+    }
+  
+    .habilidades-servicios {
+      grid-template-columns: 1fr;
+      align-items: left;
+      gap: 5px;
+      margin-top: 10px;
+    }
+  
+    .galeria {
+      grid-template-columns: 1fr;
+    }
+  
+    /* Sección de Preguntas Frecuentes y Colaboración */
+    .preguntas-frecuentes, .colaboremos {
+      flex-direction: column;
+      align-items: center;
+      margin: 20px;
+    }
+  
+    /* Contacto */
+    .contactame {
+      flex-direction: column;
+      align-items: center;
+      margin-left: 20px;
+    }
+  
+    .contactame ul {
+      align-items: center;
+    }
+  } // Cierre de la media query
+  

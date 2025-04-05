@@ -1,0 +1,42 @@
+// Variables para el footer
+$border-color: black;
+$margin-default: 50px;
+$gap-default: 10px;
+$border-width: 2px;
+
+// Mixins
+@mixin grid-layout($columns, $gap: $gap-default) {
+  display: grid;
+  grid-template-columns: $columns;
+  justify-content: center;
+  gap: $gap;
+}
+
+@mixin flex-center($gap: $gap-default) {
+  display: flex;
+  justify-content: center;
+  gap: $gap;
+}
+
+@mixin border-top($color: $border-color, $width: $border-width) {
+  border-top: $width solid $color;
+}
+
+@mixin box-margin($top: 0, $bottom: 0, $left: 0, $right: 0) {
+  margin-top: $top;
+  margin-bottom: $bottom;
+  margin-left: $left;
+  margin-right: $right;
+}
+/* inicio footer */
+
+.footer-topcompleto {
+    @include grid-layout(auto 1fr auto);
+    @include box-margin($margin-default);
+    @include border-top($border-color, $border-width);
+  }
+  
+  .footer-top {
+    @include flex-center($gap-default);
+  }
+  

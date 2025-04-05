@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>¿Quién soy?</title>
-    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/scss/style.css">
 </head>
 <body>
     <header>
@@ -12,17 +12,31 @@
             <div class="logo">
                 <img src="/assets/img/logo.png" alt="Logo de la diseñadora">
             </div>
+    
+            <!-- Checkbox oculto para controlar el menú en dispositivos móviles -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    
+            <!-- Icono de hamburguesa (aparece en móviles) -->
+            <label for="menu-toggle" class="hamburger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </label>
+    
+            <!-- Menú de navegación -->
             <div class="nav-buttons">
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="portafolio.html">Proyectos</a></li>
-                <li><a href="quiensoy.html">¿Qué hago?</a></li>
-            </ul>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="portafolio.html">Proyectos</a></li>
+                    <li><a href="quiensoy.html">¿Qué hago?</a></li>
+                </ul>
             </div>
+    
+            <!-- Botón de contacto -->
             <div class="right-button">
-                <button><a href="contacto.html">Contactar</a> </button>
-        </div>
+                <button><a href="contacto.html">Contactar</a></button>
+            </div>
         </nav>
     </header>
 

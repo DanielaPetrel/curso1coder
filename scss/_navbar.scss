@@ -1,0 +1,74 @@
+// variables
+$navbar-bg-color: white;
+$navbar-border-color: black;
+$button-bg-color: #ffffff;
+$button-border-color: black;
+$button-text-color: rgb(0, 0, 0);
+$font-size: 18px;
+$button-width: 100px;
+$button-height: 40px;
+
+.navbar {
+    display: grid;
+    grid-template-columns: auto 3fr auto;
+    justify-items: center;
+    padding: 3px;
+    color: white;
+    border-bottom: 1px solid $navbar-border-color;
+}
+
+.logo {
+img {
+    display: flex;
+    justify-content: flex-start;
+    height: 50px; // Ajusta el tamaño de la imagen
+}
+}
+
+/* Estilos para los botones de navegación */
+.nav-buttons {
+ul {
+    display: flex; // Usamos Flexbox para que los elementos estén en una fila
+    justify-content: center;
+    align-items: center;
+    list-style-type: none; // Quitamos los puntos de la lista
+    margin: 0;
+    padding: 10px;
+}
+
+li {
+    margin: 0 10px; // Espaciado entre los elementos
+    font-size: $font-size;
+}
+
+a {
+    color: $button-text-color;
+    text-decoration: none;
+}
+}
+
+.right-button {
+    display: flex;
+    justify-content: center;
+    padding: 0; // Corregido: "none" no es un valor válido
+    text-decoration: none;
+
+button {
+    width: $button-width;
+    height: $button-height;
+    background-color: $button-bg-color;
+    border: 1px solid $button-border-color;
+    color: $button-text-color;
+    cursor: pointer;
+    padding-bottom: 20px 20px; // Este valor parece incorrecto, podría ser más específico (por ejemplo, padding: 20px 0)
+}
+
+a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    padding-bottom: 10px 20px;
+}
+}

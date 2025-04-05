@@ -1,0 +1,63 @@
+// Variables generales
+$font-family: "Montserrat", sans-serif;
+$color-black: #000000;
+$margin-default: 30px;
+$gap-default: 3px;
+$grid-gap-default: 20px;
+$grid-template-columns-default: 2fr 1fr;
+// Mixin para flexbox
+@mixin flex-column($justify-content: flex-start, $align-items: center, $gap: $gap-default) {
+    display: flex;
+    flex-direction: column;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    gap: $gap;
+  }
+  
+  @mixin flex-column-start($gap: $gap-default) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: $gap;
+  }
+  
+  @mixin grid-layout($columns, $gap: $grid-gap-default, $margin: $margin-default) {
+    display: grid;
+    grid-template-columns: $columns;
+    gap: $gap;
+    margin: $margin;
+  }
+  /* Sección de Diseñadora Creativa */
+.disenadora-creativa {
+    @include flex-column-start($gap-default);
+    margin-left: $margin-default;
+  }
+  
+  /* Sección de Conoce a la Diseñadora */
+  .conoce-ladisenadora {
+    @include grid-layout($grid-template-columns-default, $grid-gap-default, $margin-default);
+  }
+  
+  /* Sección de Preguntas Frecuentes */
+  .preguntas-frecuentes {
+    @include flex-column-start($gap-default);
+    margin-left: $margin-default;
+  }
+  
+  .pregunta {
+    margin-left: $margin-default;
+  }
+  
+  .preguntas-frecuentes hr {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+  
+  /* Sección Colaboremos */
+  .colaboremos {
+    @include flex-column-start($gap-default);
+    margin-left: $margin-default;
+  }
+  
+  /* Fin de la página Quién soy */
+  
