@@ -1,63 +1,82 @@
-// Variables generales
+// Variables
 $font-family: "Montserrat", sans-serif;
 $color-black: #000000;
+$gap-default: 10px;
+$border-color: black;
+$border-width: 2px;
 $margin-default: 30px;
-$gap-default: 3px;
-$grid-gap-default: 20px;
-$grid-template-columns-default: 2fr 1fr;
-// Mixin para flexbox
-@mixin flex-column($justify-content: flex-start, $align-items: center, $gap: $gap-default) {
-    display: flex;
-    flex-direction: column;
-    justify-content: $justify-content;
-    align-items: $align-items;
-    gap: $gap;
-  }
-  
-  @mixin flex-column-start($gap: $gap-default) {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: $gap;
-  }
-  
-  @mixin grid-layout($columns, $gap: $grid-gap-default, $margin: $margin-default) {
-    display: grid;
-    grid-template-columns: $columns;
-    gap: $gap;
-    margin: $margin;
-  }
-  /* Sección de Diseñadora Creativa */
-.disenadora-creativa {
-    @include flex-column-start($gap-default);
-    margin-left: $margin-default;
-  }
-  
-  /* Sección de Conoce a la Diseñadora */
-  .conoce-ladisenadora {
-    @include grid-layout($grid-template-columns-default, $grid-gap-default, $margin-default);
-  }
-  
-  /* Sección de Preguntas Frecuentes */
-  .preguntas-frecuentes {
-    @include flex-column-start($gap-default);
-    margin-left: $margin-default;
-  }
-  
-  .pregunta {
-    margin-left: $margin-default;
-  }
-  
-  .preguntas-frecuentes hr {
-    margin-left: 60px;
-    margin-right: 60px;
-  }
-  
-  /* Sección Colaboremos */
-  .colaboremos {
-    @include flex-column-start($gap-default);
-    margin-left: $margin-default;
-  }
-  
-  /* Fin de la página Quién soy */
-  
+$padding-footer: 20px;
+
+// Mixins
+@mixin full-width {
+  width: 100%;
+}
+
+@mixin flex-row($gap: $gap-default) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: $gap;
+}
+
+@mixin flex-center($gap: $gap-default) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: $gap;
+}
+
+@mixin border-top($color: $border-color, $width: $border-width) {
+  border-top: $width solid $color;
+}
+
+/* === Footer === */
+.footer {
+  @include full-width;
+  @include border-top($border-color, $border-width);
+  background-color: #f9f9f9;
+  padding: $padding-footer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Columna izquierda: Logo */
+.footer-logo {
+  @include flex-center;
+  flex: 1;
+}
+
+.footer-logo img {
+  width: 120px; /* Ajusta el tamaño según lo que necesites */
+  height: auto;
+}
+
+/* Columna central: Textos */
+.footer-textos {
+  @include flex-center;
+  flex: 2;
+  justify-content: center; /* Centra los textos */
+}
+
+.footer-textos span {
+  font-family: $font-family;
+  font-size: 14px;
+  padding: 0 10px; /* Espaciado entre los textos */
+}
+
+/* Columna derecha: Íconos */
+.footer-icons {
+  @include flex-center;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.footer-icons i {
+  font-size: 20px;
+  margin-left: 15px; /* Espaciado entre los íconos */
+  cursor: pointer;
+}
+
