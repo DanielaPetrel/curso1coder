@@ -676,4 +676,57 @@ h5 {
   line-height: 140%;
 }
 
-/*# sourceMappingURL=style.css.map */
+button {
+  background-color: white;
+  color: black;
+  padding: 12px 24px;
+  border: 2px solid black;
+  border-radius: 0;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+  transform: scale(1.05); /* pequeño zoom al pasar el mouse */
+}
+.botoncontacto-seccion2home a {
+  transition: color 0.3s ease, text-decoration 0.3s ease, transform 0.2s ease;
+}
+
+.botoncontacto-seccion2home a:hover {
+  color: #555;
+  text-decoration: underline;
+  transform: scale(1.02);
+}
+
+.right-button a {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+  transition: color 0.3s ease, text-decoration 0.3s ease, transform 0.2s ease;
+}
+
+.right-button a:hover {
+  color: #fff6f6;
+  text-decoration: underline;
+  transform: scale(1.02);
+}
+
+.nav-buttons a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.nav-buttons a:hover {
+  transform: scale(1.1);
+  color: #6d5b9c;
+}
